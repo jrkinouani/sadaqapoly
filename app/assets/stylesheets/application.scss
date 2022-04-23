@@ -171,6 +171,7 @@ section {
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
+  background: #fff;
 }
 .header.header-scrolled {
   background: #fff;
@@ -238,6 +239,14 @@ section {
   margin-left: 30px;
   border-radius: 4px;
   color: #fff;
+}
+.navbar .getstarted1, .navbar .getstarted:focus {
+  background: #fff;
+  border: 2px solid #4154f1;
+  padding: 8px 20px;
+  margin-left: 30px;
+  border-radius: 4px;
+  color: black;
 }
 .navbar .getstarted:hover, .navbar .getstarted:focus:hover {
   color: #fff;
@@ -411,11 +420,23 @@ section {
 .hero .btn-get-started {
   margin-top: 30px;
   line-height: 0;
-  padding: 15px 40px;
+  padding: 25px 40px;
   border-radius: 4px;
+  border: 4px  solid #4154f1;
+
   transition: 0.5s;
   color: #fff;
   background: #4154f1;
+  box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
+}
+.hero .btn-get-started-1 {
+  margin-top: 30px;
+  line-height: 0;
+  padding: 25px 40px;
+  border: 2px  solid #4154f1;
+  transition: 0.5s;
+  color: #4154f1;
+  background: #fff;
   box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
 }
 .hero .btn-get-started span {

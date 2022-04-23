@@ -7,6 +7,8 @@ class StaticPagesController < ApplicationController
   end
 
   def pricing
+  end
 
+  def masjidhome
   end
 end

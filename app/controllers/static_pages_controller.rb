@@ -11,4 +11,7 @@ class StaticPagesController < ApplicationController
 
   def masjidhome
   end
+
+  def invest
+  end
 end

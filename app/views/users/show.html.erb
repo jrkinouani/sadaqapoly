@@ -1,0 +1,18 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="panel panel-default">
+          <div class="panel-heading" style="margin-top:100px;">Qui suis-je</div>
+          <div class="panel-body">
+            <h4><%= @user.first_name %></h4>
+            <h4><%= @user.last_name %></h4>
+            <h4><%= @user.email %></h4>
+            <%= link_to "inscription",  new_user_registration_path %>
+        <%= link_to "modifiez votre profile", edit_user_registration_path %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  #get 'static_pages/home'
+  devise_for :users, :path => '',
+                    :path_names=> {:sign_in=>"login", :sign_out=>"logout", :edit=>"profil"},
+                    :controller=>{:confirmations=>"confirmation"}
+  resources :users, only: [:show, :edit]  #get 'static_pages/home'
   root 'static_pages#home'
   get '/about' , to: "static_pages#about"
   get '/pricing' , to: "static_pages#pricing"

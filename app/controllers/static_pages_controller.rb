@@ -14,4 +14,6 @@ class StaticPagesController < ApplicationController
 
   def invest
   end
+
+  
 end

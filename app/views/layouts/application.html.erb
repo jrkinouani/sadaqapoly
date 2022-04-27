@@ -23,13 +23,15 @@
 
     <%= csrf_meta_tags %>
     <title>Sadaqapoly</title>
+
+    <!-- we can put a custom yield with parameter here -->
   </head>
 
   <body>
   <%= render 'layouts/navbar' %>
    <%= yield %>
   <%= render 'layouts/footer' %>
-  
+
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

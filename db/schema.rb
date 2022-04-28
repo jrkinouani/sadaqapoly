@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_25_095052) do
+ActiveRecord::Schema.define(version: 2022_04_28_081201) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "masjids", force: :cascade do |t|
+    t.string "name"
+    t.string "city"
+    t.text "desc"
+    t.integer "funding_goal"
+    t.integer "amount_pledged"
+    t.date "end_date"
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_masjids_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

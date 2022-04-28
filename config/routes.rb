@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :masjids
+  get 'masjid/index'
   devise_for :users, :path => '',
                     :path_names=> {:sign_in=>"login", :sign_out=>"logout", :edit=>"profil"},
                     :controller=>{:confirmations=>"confirmation"}

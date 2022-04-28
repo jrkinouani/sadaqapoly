@@ -9,6 +9,25 @@
             <h4><%= @user.last_name %></h4>
             <h4><%= @user.email %></h4>
         <%= link_to "modifiez votre profile", edit_user_registration_path %>
+        <hr>
+        <h4>Votre mosquée : </h4>
+        <% @masjids.each do |masjid| %>
+              <div class="col-md-4 col-lg-4">
+                <div class="panel panel-default">
+                  <div class="panel-heading preview">
+                    <h3><%= masjid.name %></h3>
+                  </div>
+                  <div class="panel-body">
+                    <td><%= masjid.name %></td>
+                    <td><%= masjid.city %></td>
+                    <td><%= masjid.desc %></td>
+                    <td><%= masjid.funding_goal %></td>
+                    <td><%= masjid.amount_pledged %></td>
+                    <td><%= masjid.end_date %></td>
+                  </div>
+                </div>
+              </div>
+              <% end %>
           </div>
         </div>
       </div>

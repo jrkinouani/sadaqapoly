@@ -1,0 +1,38 @@
+<section id="team" class="team">
+  <div class="container" data-aos="fade-up">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @masjid.name %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @masjid.city %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @masjid.desc %>
+</p>
+
+<p>
+  <strong>Funding goal:</strong>
+  <%= @masjid.funding_goal %> €
+</p>
+
+<p>
+  <strong>Amount pledged:</strong>
+  <%= @masjid.amount_pledged %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @masjid.end_date %>
+</p>
+
+<%= link_to 'Edit', edit_masjid_path(@masjid) %> |
+<%= link_to 'Back', masjids_path %>
+</div>
+</section>

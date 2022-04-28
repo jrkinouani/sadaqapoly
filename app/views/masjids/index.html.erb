@@ -1,0 +1,43 @@
+<section id="team" class="team">
+
+  <div class="container" data-aos="fade-up">
+<p id="notice"><%= notice %></p>
+
+<h1>Masjids</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>City</th>
+      <th>Desc</th>
+      <th>Funding goal</th>
+      <th>Amount pledged</th>
+      <th>End date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+    <% @masjids.each do |masjid| %>
+      <tr>
+        <td><%= masjid.name %></td>
+        <td><%= masjid.city %></td>
+        <td><%= masjid.desc %></td>
+        <td><%= masjid.funding_goal %></td>
+        <td><%= masjid.amount_pledged %></td>
+        <td><%= masjid.end_date %></td>
+        <td><%= link_to 'Show', masjid %></td>
+        <td><%= link_to 'Edit', edit_masjid_path(masjid) %></td>
+        <td><%= link_to 'Destroy', masjid, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</section>
+
+<br>
+
+<%= link_to 'New Masjid', new_masjid_path %>

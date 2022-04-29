@@ -1,38 +1,62 @@
 <section id="team" class="team">
   <div class="container" data-aos="fade-up">
-<p id="notice"><%= notice %></p>
+    <div class="row">
+      <div class="col-md-6">
+        <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @masjid.name %>
-</p>
+        <p>
+          <strong>Name:</strong>
+          <%= @masjid.name %>
+        </p>
 
-<p>
-  <strong>City:</strong>
-  <%= @masjid.city %>
-</p>
+        <p>
+          <strong>City:</strong>
+          <%= @masjid.city %>
+        </p>
 
-<p>
-  <strong>Desc:</strong>
-  <%= @masjid.desc %>
-</p>
+        <p>
+          <strong>Desc:</strong>
+          <%= @masjid.desc %>
+        </p>
 
-<p>
-  <strong>Funding goal:</strong>
-  <%= @masjid.funding_goal %> €
-</p>
+        <p>
+          <strong>Funding goal:</strong>
+          <%= @masjid.funding_goal %> €
+        </p>
 
-<p>
-  <strong>Amount pledged:</strong>
-  <%= @masjid.amount_pledged %>
-</p>
+        <p>
+          <strong>Amount pledged:</strong>
+          <%= @masjid.amount_pledged %>
+        </p>
 
-<p>
-  <strong>End date:</strong>
-  <%= @masjid.end_date %>
-</p>
+        <p>
+          <strong>End date:</strong>
+          <%= @masjid.end_date %>
+        </p>
 
-<%= link_to 'Edit', edit_masjid_path(@masjid) %> |
-<%= link_to 'Back', masjids_path %>
+        <%= link_to 'Edit', edit_masjid_path(@masjid) %> |
+        <%= link_to 'Back', masjids_path %>
+
 </div>
+
+<div class="col-md-6" style="margin-top: 30px;">
+  <h1>plan de la mosquée</h1>
+
+  <div class="row">
+    <div class="col-md-3" style="background-color:red; min-height: 100px;">A1</div>
+    <div class="col-md-3" style="background-color:black; min-height: 100px;">A2</div>
+    <div class="col-md-3" style="background-color:pink; min-height: 100px;">A3</div>
+    <div class="col-md-3" style="background-color:yellow ; min-height: 100px;">bbbb</div>
+ </div>
+ <div class="row">
+   <div class="col-md-3" style="background-color:black ; min-height: 100px;"> 233</div>
+   <div class="col-md-3" style="background-color:pink ; min-height: 100px;">333</div>
+   <div class="col-md-3" style="background-color:yellow ; min-height: 100px;">bbbb</div>
+   <div class="col-md-3" style="background-color:red ; min-height: 100px;">b  c</div>
+</div>
+</div>
+
+</div>
+</div>
+
 </section>

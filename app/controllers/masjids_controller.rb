@@ -5,10 +5,12 @@ class MasjidsController < ApplicationController
   # GET /masjids or /masjids.json
   def index
     @masjids = current_user.masjids
+
   end
 
   # GET /masjids/1 or /masjids/1.json
   def show
+    @packs = Pack.all
   end
 
   # GET /masjids/new

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :packs
   resources :masjids
   get 'masjid/index'
   devise_for :users, :path => '',

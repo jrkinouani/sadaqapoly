@@ -41,22 +41,33 @@
 
 <div class="col-md-6" style="margin-top: 30px;">
   <h1>plan de la mosquée</h1>
-
   <div class="row">
-    <div class="col-md-3" style="background-color:red; min-height: 100px;">A1</div>
-    <div class="col-md-3" style="background-color:black; min-height: 100px;">A2</div>
-    <div class="col-md-3" style="background-color:pink; min-height: 100px;">A3</div>
-    <div class="col-md-3" style="background-color:yellow ; min-height: 100px;">bbbb</div>
- </div>
- <div class="row">
-   <div class="col-md-3" style="background-color:black ; min-height: 100px;"> 233</div>
-   <div class="col-md-3" style="background-color:pink ; min-height: 100px;">333</div>
-   <div class="col-md-3" style="background-color:yellow ; min-height: 100px;">bbbb</div>
-   <div class="col-md-3" style="background-color:red ; min-height: 100px;">b  c</div>
-</div>
+    <% @packs.each do |pack| %>
+      <div class="col-md-2" style="min-height: 100px;">
+           <td><%= pack.name %></td>
+            <td><%= pack.price %> €</td>
+       </div>
+      <% end %>
+  </div>
+
 </div>
 
 </div>
 </div>
 
 </section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+
+  var colors = ['red','blue','green','yellow','cyan','orange'];
+
+    $('.col-md-2').each(function(){
+      var new_color = colors[Math.floor(Math.random()*colors.length)];
+      $(this).css('background-color',new_color);
+    });
+
+  });
+
+</script>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pack.name %>
+</p>
+
+<p>
+  <strong>Masjid:</strong>
+  <%= @pack.masjid_id %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @pack.price %>
+</p>
+
+<%= link_to 'Edit', edit_pack_path(@pack) %> |
+<%= link_to 'Back', packs_path %>

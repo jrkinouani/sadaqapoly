@@ -43,8 +43,9 @@
   <h1>plan de la mosquée</h1>
   <div class="row">
     <% @packs.each do |pack| %>
-      <div class="col-md-2" style="min-height: 100px;">
+      <div class="col-md-2" style="min-height: 50px;">
            <td><%= pack.name %></td>
+           <img src="/unlock-padlock.png" alt="" class="img-responsive" >
             <td><%= pack.price %> €</td>
        </div>
       <% end %>

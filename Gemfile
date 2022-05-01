@@ -29,6 +29,7 @@ gem 'devise'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'nested_scaffold'
 
 group :development, :test do
     gem 'rspec-rails', '~> 4.1.0'

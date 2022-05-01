@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   get 'charges/create'
   get 'charges/new'
-  resources :masjids
   get 'masjid/index'
   devise_for :users, :path => '',
                     :path_names=> {:sign_in=>"login", :sign_out=>"logout", :edit=>"profil"},

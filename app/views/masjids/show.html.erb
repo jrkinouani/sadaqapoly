@@ -1,0 +1,42 @@
+<section style="margin-top:100px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p id="notice"><%= notice %></p>
+        <p>
+          <strong>Name:</strong>
+          <%= @masjid.name %>
+        </p>
+        <%= link_to 'Edit', edit_masjid_path(@masjid) %> |
+        <%= link_to 'Back', masjids_path %>
+      </div>
+
+    <div class="col-md-6">
+      <h3>Acheter un pack :</h3>
+      <div class="row">
+        <% @masjid.packs.each do |pack| %>
+        <div class="col-md-2">
+            <h4><%= pack.name %></h4>
+            <h4>  <%= pack.price  %></h4>
+        </div>
+        <% end%>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+
+  var colors = ['red','blue','green','yellow','cyan','orange'];
+
+    $('.col-md-2').each(function(){
+      var new_color = colors[Math.floor(Math.random()*colors.length)];
+      $(this).css('background-color',new_color);
+    });
+
+  });
+
+</script>

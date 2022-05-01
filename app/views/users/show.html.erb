@@ -12,26 +12,19 @@
         <hr>
         <h4>Votre mosquée : </h4>
         <% @masjids.each do |masjid| %>
-              <div class="col-md-4 col-lg-4">
-                <div class="panel panel-default">
-                  <div class="panel-heading preview">
-                    <h3><%= masjid.name %></h3>
-                  </div>
-                  <div class="panel-body">
-                    <td><%= masjid.name %></td>
-                    <td><%= masjid.city %></td>
-                    <td><%= masjid.desc %></td>
-                    <td><%= masjid.funding_goal %></td>
-                    <td><%= masjid.amount_pledged %></td>
-                    <td><%= masjid.end_date %></td>
-                    <td><%= link_to 'Show', masjid %></td>
-                  </div>
+            <div class="col-md-4 col-lg-4">
+              <div class="panel panel-default">
+                <div class="panel-heading preview">
+                  <h3><%= masjid.name %></h3>
+                </div>
+                <div class="panel-body">
+                  <td><%= masjid.name %></td>
                 </div>
               </div>
-              <% end %>
-              <hr>
-              <h4><%= link_to "créer un packs pour votre mosquée", new_pack_path %></h4>
-          </div>
+            </div>
+            <% end %>
+            <hr>
+            <h4>  <%= link_to 'Back to masjid page', masjids_path %></h4>
         </div>
       </div>
     </div>

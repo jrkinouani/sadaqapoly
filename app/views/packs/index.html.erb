@@ -1,0 +1,32 @@
+<section>
+  <div class="container">
+
+    <h1>Listing packs</h1>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <<th>Masjid</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+      <% @packs.each do |pack| %>
+      <tr>
+        <td><%= pack.name %></td>
+        <td><%= pack.price %></td>
+        <td><%= pack.masjid.name %></td>
+        <td><%= link_to 'Show', [pack.masjid, pack] %></td>
+        <td><%= link_to 'Edit', edit_masjid_pack_path(pack.masjid, pack) %></td>
+        <td><%= link_to 'Destroy', [pack.masjid, pack], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+    </table>
+
+    <br />
+    <%= link_to 'Back to masjid page', masjids_path %> |
+    <%= link_to 'New Pack', new_masjid_pack_path(params[:masjid_id]) %>
+  </div>
+</section>

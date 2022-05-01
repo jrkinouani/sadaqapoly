@@ -1,0 +1,20 @@
+<section style="margin-top:100px;">
+  <div class="container">
+
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <b>Name:</b>
+      <%= @pack.name %>
+    </p>
+
+    <p>
+      <b>Price:</b>
+      <%= @pack.price %>
+    </p>
+
+
+    <%= link_to 'Edit', edit_masjid_pack_path(@pack.masjid, @pack) %> |
+    <%= link_to 'Back', masjid_packs_path(@pack.masjid) %>
+  </div>
+</section>

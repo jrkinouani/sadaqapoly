@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :packs
+  get 'charges/create'
+  get 'charges/new'
   resources :masjids
   get 'masjid/index'
   devise_for :users, :path => '',

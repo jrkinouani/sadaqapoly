@@ -37,23 +37,13 @@
         <%= link_to 'Edit', edit_masjid_path(@masjid) %> |
         <%= link_to 'Back', masjids_path %>
 
-</div>
+    </div>
 
-<div class="col-md-6" style="margin-top: 30px;">
-  <h1>plan de la mosquée</h1>
-  <div class="row">
-    <% @packs.each do |pack| %>
-      <div class="col-md-2" style="min-height: 50px;">
-           <td><%= pack.name %></td>
-           <img src="/unlock-padlock.png" alt="" class="img-responsive" >
-            <td><%= pack.price %> €</td>
-       </div>
-      <% end %>
-  </div>
-
-</div>
-
-</div>
+    <div class="col-md-6" style="margin-top: 30px;">
+      <h1>plan de la mosquée</h1>
+      
+    </div>
+ </div>
 </div>
 
 </section>

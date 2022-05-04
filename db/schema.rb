@@ -10,16 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_01_085328) do
+ActiveRecord::Schema.define(version: 2022_05_01_110911) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "donations", force: :cascade do |t|
+    t.float "price"
+    t.bigint "pack_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["pack_id"], name: "index_donations_on_pack_id"
+  end
 
   create_table "masjids", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
+    t.float "funding_goal"
+    t.float "amount_pledged"
     t.index ["user_id"], name: "index_masjids_on_user_id"
   end
 
@@ -46,6 +56,7 @@ ActiveRecord::Schema.define(version: 2022_05_01_085328) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "donations", "packs"
   add_foreign_key "masjids", "users"
   add_foreign_key "packs", "masjids"
 end

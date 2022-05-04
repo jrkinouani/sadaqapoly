@@ -64,6 +64,6 @@ class MasjidsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def masjid_params
-      params.require(:masjid).permit(:name)
+      params.require(:masjid).permit(:name, :funding_goal, :amount_pledged)
     end
 end

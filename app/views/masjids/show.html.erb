@@ -5,7 +5,8 @@
         <p id="notice"><%= notice %></p>
         <p>
           <strong>Name:</strong>
-          <%= @masjid.name %>
+          <%= @masjid.name %> <br>
+          <h4>Objectif financier: <%= @masjid.funding_goal%> €</h4>
         </p>
         <%= link_to 'Edit', edit_masjid_path(@masjid) %> |
         <%= link_to 'Back', masjids_path %>
@@ -18,6 +19,7 @@
         <div class="col-md-2">
             <h4><%= pack.name %></h4>
             <h4>  <%= pack.price  %></h4>
+            <%= link_to 'Faire une réservation', new_donation_path%>
         </div>
         <% end%>
       </div>
@@ -38,5 +40,4 @@
     });
 
   });
-
 </script>

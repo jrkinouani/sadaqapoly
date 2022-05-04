@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :donations
   resources :masjids do
     resources :packs
   end
